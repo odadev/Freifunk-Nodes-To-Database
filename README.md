@@ -28,7 +28,7 @@ Dies kann man natürlich beliebig für sich und seine Community so nutzen, wie m
 ### Zusatz "_live"
 Der Zusatz "_live" soll verdeutlichen, dass in dieser Tabelle noch recht aktuelle Daten vorhanden sind. Diese Daten werden - je nach Ausführung des Cronjobs - beispielsweise alle 5 Minuten neu geschrieben. Somit bekommt man für jeden Node für alle 5 Minuten die Anzahl der Clients und den Onlinestatus.
 
-Da das natürlich sehr viele Daten sind, soll ein weiter Cronjob ausgeführt werden. Dieser schaut nach, ob die Daten älter als ein gewisser Zeitraum sind (beispielsweise 48 Stunden), verdichtet die Daten und schreibt diese in eine andere Tabelle "node_clients_archive". Natürlich werden die Daten dann in der "_live"-Tabelle gelöscht.
+Da das natürlich sehr viele Daten sind, soll ein weiter Cronjob ausgeführt werden. Dieser schaut nach, ob die Daten älter als ein gewisser Zeitraum sind (beispielsweise 48 Stunden oder auch nur ein Jahr o.Ä., da die Daten nicht so viel Speicher benötigen), verdichtet die Daten und schreibt diese in eine andere Tabelle "node_clients_archive". Natürlich werden die Daten dann in der "_live"-Tabelle gelöscht.
 
 ### Zusatz "_archive"
 In dieser Tabelle befinden sich die verdichteten Daten. Diese sind nicht aktuell.
