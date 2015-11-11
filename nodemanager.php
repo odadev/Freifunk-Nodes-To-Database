@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('__IN_SITE__')) { echo "Zugriff verweigert!"; die(); } 
 
 /**
  * Klasse zur Verwaltung der Nodes
@@ -35,7 +35,8 @@ class NodeManager {
      */
     private function createTimestamp() {
         // Zeigt an, von wann die Daten, die angezeigt werden, sind.
-        $this->timestamp = date("d.m.Y H:i", strtotime($this->jsonData["timestamp"])+(60*60*2));
+        // Zählt normalerweise eine Stunde drauf, da die Zeit sonst nicht stimmt
+        $this->timestamp = date("d.m.Y H:i", strtotime($this->jsonData["timestamp"])+(60*60*1));
     }
     
     /**
